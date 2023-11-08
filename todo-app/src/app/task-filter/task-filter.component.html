@@ -1,0 +1,8 @@
+<div>
+    <button (click)="toggleFilter()">Mostrar {{ filterCompleted ? 'Completadas' : 'No Completadas' }}</button>
+    <select [(ngModel)]="filterCompleted">
+        <option [ngValue]="null">Todas</option>
+        <option [ngValue]="false">No Completadas</option>
+        <option [ngValue]="true">Completadas</option>
+    </select>
+</div>

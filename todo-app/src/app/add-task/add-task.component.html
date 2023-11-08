@@ -1,0 +1,6 @@
+<div>
+    <input [(ngModel)]="taskName" placeholder="Nombre de la tarea">
+    <input type="hidden" [(ngModel)]="taskCompleted" [value]="false">
+    <button (click)="addTask()">Agregar tarea</button>
+  </div>
+  

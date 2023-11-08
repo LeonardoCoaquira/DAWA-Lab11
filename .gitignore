@@ -1,7 +1,6 @@
 my-app/node_modules/*
 my-app/.gitignore
 my-app/.vscode
-todo-app/*
 todo-app/node_modules/*
 todo-app/.gitignore
 todo-app/.vscode

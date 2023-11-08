@@ -1,0 +1,3 @@
+<app-add-task (taskAdded)="addTask($event)"></app-add-task>
+<app-task-filter [(filterCompleted)]="filterCompleted"></app-task-filter>
+<app-task-list [tasks]="tasks" [filterCompleted]="filterCompleted"></app-task-list>
