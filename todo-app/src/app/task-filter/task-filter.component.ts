@@ -6,14 +6,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./task-filter.component.css']
 })
 export class TaskFilterComponent {
-  @Input() filterCompleted: boolean = false;
-  @Input() showAll: boolean = false;
-  @Output() filterCompletedChange = new EventEmitter<boolean>();
-  @Output() filterShowAll = new EventEmitter<boolean>();
-  
+  @Input() filterCompleted: string = 'all';
+  @Output() filterCompletedChange = new EventEmitter<string>();
 
   toggleFilter() {
-    this.filterCompleted = !this.filterCompleted;
+    if (this.filterCompleted === 'all') {
+      this.filterCompleted = 'all';
+    } else if (this.filterCompleted === 'notCompleted') {
+      this.filterCompleted = 'notCompleted';
+    } else if (this.filterCompleted === 'completed') {
+      this.filterCompleted = 'completed';
+    } else {
+      this.filterCompleted = 'all';
+    }
     this.filterCompletedChange.emit(this.filterCompleted);
   }
 }

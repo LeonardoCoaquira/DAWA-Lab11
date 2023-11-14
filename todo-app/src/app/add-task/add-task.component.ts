@@ -14,8 +14,8 @@ export class AddTaskComponent {
   addTask() {
     const newTask = { name: this.taskName, completed: this.taskCompleted };
     this.taskAdded.emit(newTask);
-    this.taskName = ''; // Limpia el campo de entrada después de agregar la tarea
-    this.taskCompleted = false; // Restablece el estado a "false"
+    this.taskName = ''; 
+    this.taskCompleted = false;
   }
   
 }

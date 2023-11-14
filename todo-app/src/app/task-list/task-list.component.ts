@@ -7,16 +7,17 @@ import { Component, Input } from '@angular/core';
 })
 export class TaskListComponent {
   @Input() tasks: { name: string, completed: boolean }[] = [];
-  @Input() filterCompleted: boolean = false;
-  @Input() showAll: boolean = false;
+  @Input() filterCompleted: string = '';
 
   filteredTasks(): { name: string, completed: boolean }[] {
-    if (this.showAll) {
-      return this.tasks; // Mostrar todas las tareas
-    } else if (this.filterCompleted) {
+    if (this.filterCompleted === 'all') {
+      return this.tasks;
+    } else if (this.filterCompleted === 'completed') {
       return this.tasks.filter(task => task.completed);
-    } else {
+    } else if (this.filterCompleted === 'notCompleted') {
       return this.tasks.filter(task => !task.completed);
+    } else {
+      return this.tasks;
     }
   }
 }

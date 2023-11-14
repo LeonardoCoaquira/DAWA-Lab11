@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  filterCompleted: boolean = false;
-  filterAll: boolean = false;
+  filterCompleted: string = 'all';
 
   tasks: { name: string, completed: boolean }[] = [];
 

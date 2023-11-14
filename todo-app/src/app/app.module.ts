@@ -7,6 +7,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { FormsModule } from '@angular/forms';
 import { TaskFilterComponent } from './task-filter/task-filter.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TaskFilterComponent } from './task-filter/task-filter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
